@@ -1,7 +1,10 @@
+//List of node modules required for this project
+
 const inquirer = require('inquirer');
 const { writeFile } = require('fs').promises;
+const generateMarkdown = require('./Develop/utils/generateMarkdown')
 
-
+//List of questions to ask the user
 const questions = () => {
   return inquirer.prompt([
     {
@@ -53,6 +56,7 @@ const questions = () => {
   ]);
 };
 
+//Template for the README file using answers from the questions
 const writeToFile = ({title, description, installation, usage, license, credits, test, Github, email}) =>
     `# ${title}
 
@@ -92,6 +96,7 @@ ${test}
 My Github profile can be found at ${Github}.
 I can be reached at ${email}.`;
 
+//Initialize the program and generate the README
 const init = () => {
   questions()
 
