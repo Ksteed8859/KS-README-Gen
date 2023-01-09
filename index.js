@@ -46,7 +46,7 @@ const questions = () => {
     {
         type: 'input',
         name: 'Github',
-        message: 'Add the link to your Github Profile.',
+        message: 'What is your Github Username',
     },
     { 
         type: 'input',
@@ -91,9 +91,9 @@ ${license}
 
 ${test}
 
-## Contact
+## Questions
     
-My Github profile can be found at ${Github}.
+My Github profile can be found at github.com/${Github}.
 I can be reached at ${email}.`;
 
 //Initialize the program and generate the README
